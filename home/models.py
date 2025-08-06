@@ -7,6 +7,7 @@ class UserProfile(models.Model):
     email = models.EmailField()
     phone_number = models.CharField(max_length = 15)
 
-    def__str__(self):
+    def __str__(self):
         return self.name
 
+class 
