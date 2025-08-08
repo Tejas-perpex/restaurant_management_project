@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Menu</title>
+</head>
+<body style="font-family: Arial, sans-serif; margin: 40px;">
+    <h1>Restaurant Menu</h1>
+    <ul>
+        {% for item in menu_items %}
+            <li>{{ item.name }} - ${{ item.price }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/">Back to Home</a>
+</body>
+</html>
