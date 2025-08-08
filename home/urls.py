@@ -1,8 +1,6 @@
 from django.urls import path
-from .views import homepage, about
+from .views import menu_list
 
 urlpatterns = [
-    path('', homepage, name='homepage'),
-    path('about/', about, name='about'),
+    path('menu/', menu_list, name='menu_list'),
 ]
-
