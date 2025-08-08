@@ -1,68 +1,41 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            margin: 0;
-            padding: 0;
-        }
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width = device width ,initial scale =1.0">
+        <title> Restuarent Menu </title>
+        <style>
+            body{
+              font-family: Arial , sans-serif;
+              background-colour : #f8f8f8;
+              margin : 0;
+              pading : 0;
+            }
+            
+            header{
+              background-colour : coral;
+              color : white;
+              padding : 20px;
+              text-align : centre;
+            }
+            main{
+              display : flex;
+              flex-wrap: wrap;
+              justify-content : center;
+              padding : 20px;
 
-        header {
-            background-color: coral;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+            }
+        </style>
+    <head>
+        <body>
+            <header>
+                <h1> Welcome to the restuarent </h1>
+            </header>
 
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            padding: 20px;
-        }
-
-        .menu-item {
-            background: white;
-            padding: 15px;
-            margin: 15px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            width: 250px;
-            text-align: center;
-        }
-
-        .menu-item h2 {
-            margin: 0 0 10px 0;
-            color: #333;
-        }
-
-        .menu-item p {
-            font-size: 18px;
-            color: #666;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Our Restaurant</h1>
-    </header>
-
-    <main>
-        {% for item in items %}
-        <div class="menu-item">
-            <h2>{{ item.item_name }}</h2>
-            <p>${{ item.item_price }}</p>
-        </div>
-        {% empty %}
-        <p>No menu items available.</p>
-        {% endfor %}
-    </main>
-</body>
-</html>
-
+            <main>
+                {% for items in class %}
+                <p> No items available </p>
+            </main>
+        </body>
+    </head>
+    </html>
