@@ -1,7 +1,9 @@
+from django.conf import settings
 from django.shortcuts import render
 
-def contact_view(request):
-    return render(request, 'contact.html')
+def homepage_view(request):
+    phone_number = settings.RESTAURANT_PHONE
+    return render(request, 'home.html', {'phone_number': phone_number})
 
 
 
