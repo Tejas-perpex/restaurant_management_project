@@ -1,10 +1,12 @@
 from django.shortcuts import render
-from django.conf import settings
 
-def homepage(request):
-    restaurant_name = settings.RESTAURANT_NAME
-    return render(request, "home.html", {"restaurant_name": restaurant_name})
+def menu_list(request):
+    # Hardcoded menu items for now
+    menu_items = [
+        {"name": "Margherita Pizza", "price": 8.99},
+        {"name": "Pasta Alfredo", "price": 10.50},
+        {"name": "Caesar Salad", "price": 6.75},
+    ]
+    return render(request, "menu.html", {"menu_items": menu_items})
 
-def about(request):
-    return render(request, "about.html")
 
