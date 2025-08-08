@@ -1,10 +1,10 @@
-from django.conf import settings
 from django.shortcuts import render
+from django.conf import settings
 
 def homepage(request):
-    context = {
-        'restaurant_name': settings.RESTAURANT_NAME
-    }
-    return render(request, 'home.html', context)
+    restaurant_name = settings.RESTAURANT_NAME
+    return render(request, "home.html", {"restaurant_name": restaurant_name})
 
+def about(request):
+    return render(request, "about.html")
 
