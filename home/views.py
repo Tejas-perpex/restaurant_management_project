@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from datetime import datetime
 
-def reservations_view(request):
-    return render(request, 'reservations.html')
-
+def homepage(request):
+    context = {
+        'current_year': datetime.now().year
+    }
+    return render(request, 'home.html', context)
 
 
