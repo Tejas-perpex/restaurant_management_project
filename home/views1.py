@@ -17,5 +17,5 @@ def homepage(request):
 
     return render(request, "home.html", {
         "menu_items": menu_items,
-        "error_message": error_message
-    })
+        "error_message" : error 
+        })
