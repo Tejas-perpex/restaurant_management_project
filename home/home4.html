@@ -1,0 +1,13 @@
+{% if error_message %}
+    <div style="color: red; text-align: center; margin: 10px;">
+        {{ error_message }}
+    </div>
+{% endif %}
+
+<ul>
+    {% for item in menu_items %}
+        <li>{{ item.name }} - {{ item.price }}</li>
+    {% empty %}
+        <li>No menu items available.</li>
+    {% endfor %}
+</ul>
