@@ -1,63 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Homepage</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-            color: #333;
-            margin: 0;
-            padding: 0;
-        }
+{% if error_message %}
+    <div style="color: red; text-align: center; margin: 10px;">
+        {{ error_message }}
+    </div>
+{% endif %}
 
-        header {
-            background-color: #ff7f50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
-
-        h1 {
-            margin-bottom: 10px;
-        }
-
-        p {
-            line-height: 1.6;
-        }
-
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <h1>🍽️ Welcome to Our Restaurant</h1>
-        <p>Delicious food, friendly service, and a cozy atmosphere</p>
-    </header>
-
-    <main>
-        <h2>About Us</h2>
-        <p>We serve fresh, locally sourced meals made with love. Come and enjoy the best dining experience in town.</p>
-    </main>
-
-    <footer>
-        &copy; {{ current_year }} Our Restaurant. All rights reserved.
-    </footer>
-
-</body>
-</html>
+<ul>
+    {% for item in menu_items %}
+        <li>{{ item.name }} - {{ item.price }}</li>
+    {% empty %}
+        <li>No menu items available.</li>
+    {% endfor %}
+</ul>
