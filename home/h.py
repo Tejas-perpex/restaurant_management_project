@@ -37,4 +37,4 @@ peek()
 dequeue()
 dequeue()
 dequeue()
-dequeue()  # Trying to dequeue from empty queue
+dequeue()
