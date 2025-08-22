@@ -31,7 +31,7 @@ def peek():
 enqueue("Send Welcome Email")
 enqueue("Generate Report")
 enqueue("Backup Database")
-
+ 
 peek()
 
 dequeue()
