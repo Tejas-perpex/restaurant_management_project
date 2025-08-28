@@ -3,7 +3,7 @@ from .models import Feedback
 
 class FeedbackForm(forms.ModelForm):
     class Meta:
-        model = Feedback
+        model1  = Feedback
         fields = ['comment']
         widgets = {
             'comment': forms.Textarea(attrs={
